@@ -1,0 +1,40 @@
+h1 {
+    color: red;
+    font-size: 20px;
+}
+h2 {
+    color: blue;
+    font-size: 18px;
+}
+h3 {
+    color: green;
+    font-size: 30px;
+}
+h4 {
+    color: yellow;
+    font-size: 25px;
+}
+h5 {
+    color: purple;
+    font-size: 20px;
+}
+p {
+    font-size: 15px;
+    color: green
+    font-family: 'Arial', sans-serif;
+}
+a {
+    color: blue;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+}
+ol {
+    font-size: 15px;
+    color: red;
+    font-family: 'Arial', sans-serif;
+}
+ul {
+    font-size: 15px;
+    color: green;
+    font-family: 'Arial', sans-serif;
+}
