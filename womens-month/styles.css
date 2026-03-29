@@ -1,9 +1,8 @@
 /* --- Custom Font Implementation --- */
 @font-face {
     font-family: 'SK Concretica';
-    /* Make sure the path below matches where you save your font files! */
-    src: url('fonts/SK-Concretica.woff2') format('woff2'),
-         url('fonts/SK-Concretica.woff') format('woff');
+    /* Replace YOUR-EXACT-FILE-NAME.ttf with the actual name of your file */
+    src: url('Downloads/fonts/sk-concretica-trial.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
