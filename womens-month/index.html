@@ -81,84 +81,14 @@
 
         <section id="action" class="card action-section">
             <h2>Support the Sisterhood</h2>
-            <p>Ready to make a difference? Empower the next generation of female leaders by contributing your time, mentorship, or resources.</p>
+            <p>Ready to make a difference? Empower the next generation of female leaders by contributing your time or mentorship. Choose a path below—each button opens our Google Form with the questions for that role.</p>
             
             <div class="button-group">
-                <a href="#volunteer" class="btn-pill">Give to Gain: Volunteer</a>
-                <a href="#mentor" class="btn-pill btn-secondary">Give to Gain: Mentor</a>
+                <!-- Replace href with your published volunteer Google Form link (Send → link). -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSemuyZ_1Y9WF53ExQS_f8ieZqUrl-YGlLQNcm-Lx_k1Mtj92A/viewform?usp=publish-editor" class="btn-pill" target="_blank" rel="noopener noreferrer">Give to Gain: Volunteer</a>
+                <!-- Replace href with your published mentor Google Form link, or the same URL if you use one form. -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSemuyZ_1Y9WF53ExQS_f8ieZqUrl-YGlLQNcm-Lx_k1Mtj92A/viewform?usp=publish-editor" class="btn-pill btn-secondary" target="_blank" rel="noopener noreferrer">Give to Gain: Mentor</a>
             </div>
-        </section>
-        <section id="join" class="card form-section">
-            <h2>Join the Sisterhood</h2>
-            <p>Whether you want to lend a hand or share your expertise, we need you. Fill out the application below to get started on your "Give to Gain" journey.</p>
-
-            <form action="#" method="POST" class="sisterhood-form">
-                
-                <fieldset>
-                    <legend>Your Details</legend>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="e.g. Ada Lovelace">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="ada@example.com">
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>How would you like to contribute?</legend>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="role" value="volunteer" id="role-volunteer" checked onclick="toggleForm()">
-                            Volunteer
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="role" value="mentor" id="role-mentor" onclick="toggleForm()">
-                            Mentor
-                        </label>
-                    </div>
-                </fieldset>
-
-                <fieldset id="volunteer" class="dynamic-section">
-                    <legend>Volunteer Profile</legend>
-                    <div class="form-group">
-                        <label for="interests">Areas of Interest</label>
-                        <select id="interests" name="interests">
-                            <option value="events">Event Organization & Setup</option>
-                            <option value="social">Social Media & Outreach</option>
-                            <option value="admin">Administrative Support</option>
-                            <option value="community">Community Engagement</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="availability">Hours available per week</label>
-                        <input type="number" id="availability" name="availability" min="1" max="40" placeholder="e.g. 5">
-                    </div>
-                </fieldset>
-
-                <fieldset id="mentor" class="dynamic-section" style="display: none;">
-                    <legend>Mentor Profile</legend>
-                    <div class="form-group">
-                        <label for="expertise">Field of Expertise / Industry</label>
-                        <input type="text" id="expertise" name="expertise" placeholder="e.g. Software Engineering, Marketing, Finance">
-                    </div>
-                    <div class="form-group">
-                        <label for="linkedin">LinkedIn Profile URL</label>
-                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
-                    </div>
-                    <div class="form-group">
-                        <label for="mentorship-type">What kind of guidance can you offer?</label>
-                        <select id="mentorship-type" name="mentorship-type">
-                            <option value="career">Career Navigating & Advice</option>
-                            <option value="stem">STEM Skills Tutoring</option>
-                            <option value="leadership">Leadership & Confidence Coaching</option>
-                        </select>
-                    </div>
-                </fieldset>
-
-                <button type="submit" class="btn-pill submit-btn">Submit Application</button>
-            </form>
         </section>
 
     </main>
@@ -172,6 +102,5 @@
         </address>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
