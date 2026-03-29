@@ -88,6 +88,117 @@
                 <a href="#mentor" class="btn-pill btn-secondary">Give to Gain: Mentor</a>
             </div>
         </section>
+        <section id="join" class="card form-section">
+            <h2>Join the Sisterhood</h2>
+            <p>Whether you want to lend a hand or share your expertise, we need you. Fill out the application below to get started on your "Give to Gain" journey.</p>
+
+            <form action="#" method="POST" class="sisterhood-form">
+                
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="e.g. Ada Lovelace">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="ada@example.com">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How would you like to contribute?</legend>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="role" value="volunteer" id="role-volunteer" checked onclick="toggleForm()">
+                            Volunteer
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="role" value="mentor" id="role-mentor" onclick="toggleForm()">
+                            Mentor
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset id="volunteer" class="dynamic-section">
+                    <legend>Volunteer Profile</legend>
+                    <div class="form-group">
+                        <label for="interests">Areas of Interest</label>
+                        <select id="interests" name="interests">
+                            <option value="events">Event Organization & Setup</option>
+                            <option value="social">Social Media & Outreach</option>
+                            <option value="admin">Administrative Support</option>
+                            <option value="community">Community Engagement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability">Hours available per week</label>
+                        <input type="number" id="availability" name="availability" min="1" max="40" placeholder="e.g. 5">
+                    </div>
+                </fieldset>
+
+                <fieldset id="mentor" class="dynamic-section" style="display: none;">
+                    <legend>Mentor Profile</legend>
+                    <div class="form-group">
+                        <label for="expertise">Field of Expertise / Industry</label>
+                        <input type="text" id="expertise" name="expertise" placeholder="e.g. Software Engineering, Marketing, Finance">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile URL</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                    </div>
+                    <div class="form-group">
+                        <label for="mentorship-type">What kind of guidance can you offer?</label>
+                        <select id="mentorship-type" name="mentorship-type">
+                            <option value="career">Career Navigating & Advice</option>
+                            <option value="stem">STEM Skills Tutoring</option>
+                            <option value="leadership">Leadership & Confidence Coaching</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-pill submit-btn">Submit Application</button>
+            </form>
+        </section>
+
+        <script>
+            function toggleForm() {
+                const isMentor = document.getElementById('role-mentor').checked;
+                document.getElementById('volunteer').style.display = isMentor ? 'none' : 'block';
+                document.getElementById('mentor').style.display = isMentor ? 'block' : 'none';
+            }
+
+            function applyFormHash() {
+                const hash = location.hash;
+                if (hash === '#volunteer') {
+                    document.getElementById('role-volunteer').checked = true;
+                    toggleForm();
+                    document.getElementById('volunteer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else if (hash === '#mentor') {
+                    document.getElementById('role-mentor').checked = true;
+                    toggleForm();
+                    document.getElementById('mentor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            function initFormDeepLinks() {
+                document.querySelectorAll('a[href="#volunteer"], a[href="#mentor"]').forEach(function (link) {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = link.getAttribute('href');
+                        if (location.hash !== target) {
+                            location.hash = target;
+                        } else {
+                            applyFormHash();
+                        }
+                    });
+                });
+                applyFormHash();
+            }
+
+            window.addEventListener('DOMContentLoaded', initFormDeepLinks);
+            window.addEventListener('hashchange', applyFormHash);
+        </script>
 
     </main>
 
@@ -95,7 +206,7 @@
         <address>
             <strong>Sisterhood Hub</strong><br>
             Reach out to us: <a href="mailto:immaculatemunde@gmail.com?subject=I want to help!&body=Tell%20me%20more%20about%20giving%20to%20gain.">immaculatemunde@gmail.com</a><br>
-            <a href="tel:+254743605923">Call us: +254743605923</a>
+            <a href="tel:+254743605923">Call us: +254743605923</a><br>
             <small>Created by Immaculate Munde for Women's Month.</small>
         </address>
     </footer>
